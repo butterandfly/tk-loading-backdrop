@@ -1,4 +1,7 @@
-`tk-loading-backdrop`
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://beta.webcomponents.org/element/owner/my-element)
+[![Build Status](https://travis-ci.org/butterandfly/tk-loading-backdrop.svg?branch=master)](https://travis-ci.org/butterandfly/tk-loading-backdrop)
+
+# `tk-loading-backdrop`
 A loading backdrop.
 
 ## Important
