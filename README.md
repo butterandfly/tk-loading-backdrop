@@ -13,8 +13,8 @@ The dropback's parent element's "position" should be "relative".
 ```
 <custom-element-demo>
   <template>
-    <link rel="import" href="my-element.html">
-    <div style="position:relative;height:400px">
+    <link rel="import" href="tk-loading-backdrop.html">
+    <div style="position:relative;height:400px;border:1px solid #ccc;">
       <h1>Hello.</h1>
       <h2>Second Title.</h2>
       <p>Content.</p>
