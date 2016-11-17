@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>tk-loading-backdrop demo</title>
+
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="../tk-loading-backdrop.html">
+
+    <style is="custom-style" include="demo-pages-shared-styles">
+    </style>
+
+    <style>
+      .container {
+        height: 400px;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="vertical-section-container centered">
+      <h3>Basic tk-loading-backdrop demo</h3>
+      <div class="container">
+        <h2>Title</h2>
+        <p>
+          Content content content.
+        </p>
+        <tk-loading-backdrop></tk-loading-backdrop>
+      </div>
+      <div>
+        <button id='btn' type="button">Display backdrop</button>
+      </div>
+    </div>
+    <script type="text/javascript">
+      document.querySelector('#btn').addEventListener('click', () => {
+        document.querySelector('tk-loading-backdrop').open();
+      });
+    </script>
+  </body>
+</html>

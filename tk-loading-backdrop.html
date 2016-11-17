@@ -1,0 +1,86 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-spinner/paper-spinner.html">
+
+<!--
+`tk-loading-backdrop`
+A loading backdrop.
+
+## Important
+The dropback's parent element's "position" should be "relative".
+
+@demo demo/index.html
+-->
+
+<dom-module id="tk-loading-backdrop">
+  <template>
+    <style>
+      :host {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        justify-content: center;
+        align-items: center;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        background: white;
+        opacity: 0.8;
+        z-index: 1;
+
+        display: none;
+      }
+
+      :host[opened] {
+        display: flex;
+      }
+    </style>
+
+    <paper-spinner active=[[opened]]></paper-spinner>
+  </template>
+  <script>
+  (function() {
+    'use strict';
+
+    Polymer({
+      is: 'tk-loading-backdrop',
+
+      properties: {
+        /**
+         * Is the dropback opened.
+         */
+        opened: {
+          type: Boolean,
+          value: false,
+          notify: true,
+          reflectToAttribute: true
+        }
+      },
+
+      /**
+       * Open the backdrop.
+       */
+      open: function() {
+        this.opened = true;
+      },
+
+      /**
+       * Close the backdrop.
+       */
+      close: function() {
+        this.opened = false;
+      },
+
+      /**
+       * Toggle the backdrop.
+       */
+      toggle() {
+        this.opened = !this.opened;
+      }
+    });
+  })();
+  </script>
+</dom-module>

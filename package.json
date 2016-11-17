@@ -1,0 +1,20 @@
+{
+  "name": "tk-loading-backdrop",
+  "version": "0.1.0",
+  "description": "A loading backdrop.",
+  "main": "index.html",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "wct -l chrome",
+    "lint": "./node_modules/eslint/bin/eslint.js *.html test/*.html demo/*.html"
+  },
+  "author": "butterandfly",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^3.8.0",
+    "eslint-config-google": "^0.6.0",
+    "eslint-plugin-html": "^1.5.3"
+  }
+}

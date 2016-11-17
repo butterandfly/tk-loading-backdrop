@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>tk-loading-backdrop test</title>
+
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../web-component-tester/browser.js"></script>
+
+    <link rel="import" href="../tk-loading-backdrop.html">
+  </head>
+  <body>
+    <test-fixture id="basic">
+      <template>
+        <tk-loading-backdrop></tk-loading-backdrop>
+      </template>
+    </test-fixture>
+
+    <script>
+      suite('tk-loading-backdrop', function() {
+        let el;
+        setup(() => {
+          el = fixture('basic');
+        });
+
+        test('instantiating the element works', function() {
+          assert.equal(el.is, 'tk-loading-backdrop');
+        });
+
+        test('The default value of `opened` is false', () => {
+          assert.notOk(el.opened);
+        });
+
+        test('`open()` function will set the `opened` to be true', () => {
+          el.open();
+          assert.ok(el.opened);
+        });
+
+        test('`close()` function will set the `opened` to be false', () => {
+          el.opened = true;
+          el.close();
+          assert.notOk(el.opened);
+        });
+      });
+    </script>
+  </body>
+</html>
