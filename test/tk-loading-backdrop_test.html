@@ -43,6 +43,12 @@
           el.close();
           assert.notOk(el.opened);
         });
+
+        test('The style of "display" will be "flex" when the backdrop opens', () => {
+          assert.equal(el.getComputedStyleValue('display'), 'none');
+          el.opened = true;
+          assert.equal(el.getComputedStyleValue('display'), 'flex');
+        });
       });
     </script>
   </body>
